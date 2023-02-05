@@ -1,7 +1,7 @@
 import * as yup from 'yup';
-import { BadUserInputError } from '../middleware/error';
 import { ReservationData, ReservationStatus } from './model/reservation';
 import { parse } from 'date-fns';
+import { BadUserInputError } from '../http-error/http-error';
 
 function parseDate(value: unknown, originalValue: unknown): Date | null | undefined {
     if (originalValue === null || originalValue === '') return null;

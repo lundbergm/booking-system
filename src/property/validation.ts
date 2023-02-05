@@ -1,5 +1,5 @@
 import * as yup from 'yup';
-import { BadUserInputError } from '../middleware/error';
+import { BadUserInputError } from '../http-error/http-error';
 import { PropertyData } from './model/property';
 
 const propertyDataSchema = yup.object().shape({

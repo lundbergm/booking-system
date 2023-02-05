@@ -1,5 +1,5 @@
 import { isForeignKeyError } from '../database/db-errors';
-import { BadUserInputError, NotFoundError } from '../middleware/error';
+import { BadUserInputError, NotFoundError } from '../http-error/http-error';
 import { Reservation, ReservationData } from './model/reservation';
 import { ReservationRepository } from './repository/reservation.repository';
 

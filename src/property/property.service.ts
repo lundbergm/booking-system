@@ -1,5 +1,5 @@
 import { isForeignKeyError } from '../database/db-errors';
-import { NotFoundError } from '../middleware/error';
+import { NotFoundError } from '../http-error/http-error';
 import { Property, PropertyData } from './model/property';
 import { PropertyRepository } from './repository/property.repository';
 

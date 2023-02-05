@@ -1,15 +1,15 @@
 import { GuestData } from './model/guest';
 import * as yup from 'yup';
-import { BadUserInputError } from '../middleware/error';
+import { BadUserInputError } from '../http-error/http-error';
 
-const guestPropertiesSchema = yup.object().shape({
+const guestDataSchema = yup.object().shape({
     name: yup.string().required(),
     phoneNumber: yup.string().required(),
 });
 
-export function validateGuestData(guestProperties: GuestData): void {
+export function validateGuestData(guestData: GuestData): void {
     try {
-        guestPropertiesSchema.validateSync(guestProperties);
+        guestDataSchema.validateSync(guestData);
     } catch (err) {
         if (err instanceof yup.ValidationError) {
             const message = err.message;

@@ -11,6 +11,8 @@ COPY src /home/app/src
 RUN npm ci 
 RUN npm run build
 
+RUN chown -R 1000:1000 /home/app
+
 USER 1000:1000
 
 CMD ["node", "dist/index.js"]

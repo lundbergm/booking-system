@@ -3,8 +3,6 @@ export interface GuestData {
     phoneNumber: string;
 }
 
-export interface Guest {
+export interface Guest extends GuestData {
     id: number;
-    name: string;
-    phoneNumber: string;
 }

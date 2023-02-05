@@ -1,5 +1,5 @@
 import { isForeignKeyError } from '../database/db-errors';
-import { NotFoundError } from '../middleware/error';
+import { NotFoundError } from '../http-error/http-error';
 import { Guest, GuestData } from './model/guest';
 import { GuestRepository } from './repository/guest.repository';
 

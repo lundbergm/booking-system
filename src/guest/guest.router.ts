@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import { NotFoundError } from '../middleware/error';
 import { ReservationService } from '../reservation/reservation.service';
 import { toId } from '../utils/to-id';
 import { GuestData } from './model/guest';
 import { GuestService } from './guest.service';
 import { validateGuestData } from './validation';
+import { NotFoundError } from '../http-error/http-error';
 
 export function createGuestRouter(guestService: GuestService, reservationService: ReservationService): Router {
     const router = Router();

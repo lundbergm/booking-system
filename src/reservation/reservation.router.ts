@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { NotFoundError } from '../middleware/error';
+import { NotFoundError } from '../http-error/http-error';
 import { toId } from '../utils/to-id';
 import { ReservationData } from './model/reservation';
 import { ReservationService } from './reservation.service';

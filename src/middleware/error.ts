@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
+import { HttpError } from '../http-error/http-error';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function errorMiddleware(err: Error, req: Request, res: Response, next: NextFunction): Promise<void> {
@@ -11,25 +12,4 @@ export async function errorMiddleware(err: Error, req: Request, res: Response, n
     }
     console.log(err);
     res.status(status).send({ status, message });
-}
-
-export class HttpError extends Error {
-    constructor(title: string, public status: number) {
-        super(title);
-        this.name = 'HttpError';
-    }
-}
-
-export class BadUserInputError extends HttpError {
-    constructor(message: string) {
-        super(message, 400);
-        this.name = 'BadUserInputError';
-    }
-}
-
-export class NotFoundError extends HttpError {
-    constructor(message: string) {
-        super(message, 404);
-        this.name = 'NotFoundError';
-    }
 }

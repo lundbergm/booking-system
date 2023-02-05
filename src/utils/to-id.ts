@@ -1,4 +1,4 @@
-import { BadUserInputError } from '../middleware/error';
+import { BadUserInputError } from '../http-error/http-error';
 
 export function toId(sId: string): number {
     const id = parseInt(sId, 10);
