@@ -44,12 +44,15 @@ export default class App {
 
         // Initialize db connection
         const sqliteDb = new Database(__dirname + config.sqlite.path);
+
+        // Add close function to closables to be run when server is closed
         this.closables.push(
             () => new Promise((resolve, reject) => sqliteDb.close((err) => (err ? reject(err) : resolve()))),
         );
 
         // Initialize clients
         const dbClient = new SqliteClient(sqliteDb);
+        // Needed to enable foreign key support
         dbClient.initialize();
 
         // Initialize repositories

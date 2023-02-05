@@ -94,6 +94,12 @@ export function createPropertyRouter(
             const reservations = await reservationService.getReservationsByPropertyId(id);
 
             const guestIds = reservations.map((reservation) => reservation.guestId);
+
+            if (guestIds.length === 0) {
+                res.status(200).send([]);
+                return;
+            }
+
             const guests = await guestService.getGuests(guestIds);
 
             res.status(200).send(guests);
