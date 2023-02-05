@@ -34,6 +34,7 @@ This api have four main endpoint paths; `guests`, `properties`, `reservations` a
 `guests`, `properties` and `reservations` supports the same base endpoints for CRUD operations.
 
 | Method | Path         | Operation                     |
+| ------ | ------------ | ----------------------------- |
 | GET    | /            | Get all entities              |
 | GET    | /:id         | Get a specific entity by id   |
 | POST   | /create      | Create a new entity           |
@@ -44,18 +45,22 @@ This api have four main endpoint paths; `guests`, `properties`, `reservations` a
 `guests` supports the following extra enpoints.
 
 | Method | Path              | Operation                                 |
+| ------ | ----------------- | ----------------------------------------- |
 | GET    | /:id/reservations | Get all reservations for a specific guest |
 
 
 `properties` supports the followint extra endponts.
 
 | Method | Path              | Operation                                                 |
+| ------ | ----------------- | --------------------------------------------------------- |
 | GET    | /:id/reservations | Get all reservations for a specific property              |
 | GET    | /:id/guests       | Get all guests with a reservation for a specific property |
 
 
 `messages` support the following endpoints.
 
+| Method | Path         | Operation                                     |
+| ------ | ------------ | --------------------------------------------- |
 | GET    | /guest/:id   | Get all messages to and from a specific guest |
 | POST   | /create      | Create a new message                          |
 | PUT    | /update/:id  | Update a specific message                     |
