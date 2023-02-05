@@ -16,9 +16,9 @@ import { SqliteGuestRepository } from '../guest/repository/sqlite-guest.reposito
 import { SqlitePropertyRepository } from '../property/repository/sqlite-property.repository';
 import { SqliteReservationRepository } from '../reservation/repository/sqlite-reservation.repository';
 import { SqliteClient } from '../database/sqlite-client';
-import { SqliteMessageRepository } from '../messages/repository/sqlite-message.repository';
-import { MessageService } from '../messages/message.service';
-import { createMessageRouter } from '../messages/message.router';
+import { SqliteMessageRepository } from '../message/repository/sqlite-message.repository';
+import { MessageService } from '../message/message.service';
+import { createMessageRouter } from '../message/message.router';
 
 export default class App {
     private closables: Array<() => Promise<void>> = [];
