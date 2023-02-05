@@ -28,6 +28,9 @@ This server uses a SQLITE database due to time constrains. This database would n
 
 Improvements to endpoint is documented in each router.
 
+## Database
+Table definitions can be found in the sql folder. 
+
 ## Endpoints
 This api have four main endpoint paths; `guests`, `properties`, `reservations` and `messages`.
 
